@@ -1,0 +1,26 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Desciption</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recipe of recipes">
+          <td>{{ recipe.id }}</td>
+          <td>{{ recipe.name }}</td>
+          <td>{{ recipe.description }}</td>
+          <td>
+              <button type="button" class="close" aria-label="Close" (click)="onClick(recipe)">
+                <span aria-hidden="true">×</span>
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
